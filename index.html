@@ -98,22 +98,42 @@
 </head>
 <body>
     <div class="container">
+        <!-- Header -->
         <div class="header">
             <h1>📊 mCaffeine Cloud Kitchen</h1>
-            <p>Executive Dashboard - Weekly Operations & Financial Performance</p>
+            <p>Executive Dashboard - Weekly Operations & Financial Performance By Rahul Nagaura </p>
         </div>
-
+        <!-- Tabs Navigation -->
         <div class="tabs">
-            <button class="tab-button" onclick="switchTab(0)">📋 Executive Summary</button>
-            <button class="tab-button active" onclick="switchTab(1)">📈 Demand Analysis</button>
+            <button class="tab-button active" onclick="switchTab(0)">📋 Executive Summary</button>
+            <button class="tab-button" onclick="switchTab(1)">📈 Demand Analysis</button>
             <button class="tab-button" onclick="switchTab(2)">👥 Operations & Staffing</button>
             <button class="tab-button" onclick="switchTab(3)">💰 Financial Performance</button>
             <button class="tab-button" onclick="switchTab(4)">💸 Cost Breakdown</button>
             <button class="tab-button" onclick="switchTab(5)">🎯 KPI Dashboard</button>
         </div>
 
-        <div class="tab-content">
-            <h2 style="margin-bottom: 20px; color: #366092;">Executive Summary - Key Metrics</h2>
+        <!-- TAB 1: Executive Summary -->
+        <div class="tab-content active">
+           <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+
+    <!-- LEFT SIDE: TITLE -->
+    <h2 style="margin: 0; color: #366092;">
+        Executive Summary - Key Metrics
+    </h2>
+
+    <!-- RIGHT SIDE: BUTTON -->
+    <a href="https://docs.google.com/document/d/1CdyA2pevJCRpyCJoGP2W1MHONHOEBBR4/edit?usp=sharing&ouid=102947407393239755092&rtpof=true&sd=true" 
+       target="_blank"
+       style="background: #007bff; color: white; text-decoration: none; 
+              padding: 10px 25px; border-radius: 30px; font-weight: bold;
+              box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: 0.3s ease;">
+        View Full Report →
+    </a>
+
+</div>
+
+            <!-- <h2 style="margin-bottom: 20px; color: #366092;">Executive Summary - Key Metrics</h2> -->
             <div class="metrics-grid">
                 <div class="metric-card">
                     <div class="metric-label">🛒 Weekly Orders</div>
@@ -211,10 +231,8 @@
                     </tbody>
                 </table>
             </div>
-            <!-- <div class="table-wrapper">
-                View Full Report
-            </div> -->
-            <div class="table-wrapper" style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
+            
+            <!-- <div class="table-wrapper" style="display: flex; justify-content: space-between; align-items: center; padding: 20px;">
                 <div style="font-size: 1.1em; font-weight: 600; color: #366092; display: flex; align-items: center; gap: 10px;">
                     <span>📄</span> View Full Report
                 </div>
@@ -223,10 +241,10 @@
                 style="background: #00B050; color: white; text-decoration: none; padding: 10px 25px; border-radius: 30px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: all 0.3s ease;">
                     View Document →
                 </a>
-            </div>
+            </div> -->
         </div>
-
-        <div class="tab-content active">
+        <!-- TAB 2: Demand Analysis -->
+        <div class="tab-content">
             <h2 style="margin-bottom: 20px; color: #366092;">Demand Analysis - Hourly & Daily Patterns</h2>
             
             <div class="chart-container">
@@ -328,7 +346,7 @@
                 • <strong>Saturday:</strong> 19-21h window (Sum 171 orders) → +15% Jump → 197 Freebies → Cost ₹6,895.
             </div>
         </div>
-
+        <!-- TAB 3: Operations & Staffing -->
         <div class="tab-content">
             <h2 style="margin-bottom: 20px; color: #366092;">Operations & Staffing Analysis - VERIFIED PAYROLL</h2>
             <div class="pie-container">
@@ -435,7 +453,7 @@
                 </ul>
             </div>
         </div>
-
+        <!-- TAB 4: Financial Performance -->
         <div class="tab-content">
             <h2 style="margin-bottom: 20px; color: #366092;">Financial Performance - Weekly P&L (VERIFIED)</h2>
             <div class="chart-container">
@@ -531,7 +549,7 @@
                 </table>
             </div>
         </div>
-
+         <!-- TAB 5: Cost Breakdown -->
         <div class="tab-content">
             <h2 style="margin-bottom: 20px; color: #366092;">Operating Cost Breakdown</h2>
             <div class="pie-container">
@@ -596,7 +614,7 @@
                 </table>
             </div>
         </div>
-
+        <!-- TAB 6: KPI Dashboard -->
         <div class="tab-content">
             <h2 style="margin-bottom: 20px; color: #366092;">KPI Dashboard - Performance Tracking</h2>
             <div class="gauge-grid">
@@ -878,6 +896,8 @@
             },
             options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom' } } }
         });
+    
+
 
     </script>
 </body>
